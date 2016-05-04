@@ -96,6 +96,26 @@ You've added a simple yet effective modification.
 
 There is no need to limit the falling speed or modify the x velocity as the bunny should never move horizontally.
 
+#Adding SFX
+
+If a bunny flaps its ears in the forest and no one is around to hear it, does it make a sound?
+
+Thankfully your bunny is right in front of you and it would be nice to add SFX to accompany the flapping animation.
+
+Adding sound effects is quite straight forward in SpriteKit, you can make use of the `playSoundFileNamed` *SKAction* to play sounds in code.
+
+> [action]
+> Add the following to the `touchesBegan(...)` method:
+>
+```
+/* Play SFX */
+let flapSFX = SKAction.playSoundFileNamed("sfx_flap", waitForCompletion: false)
+self.runAction(flapSFX)
+```
+>
+
+Run the game... Let there be sound!
+
 #Make the bunny rotate
 
 One of the nice visual touches in Flappy Bird is the way the bird rotates. When the player does not touch the screen for a little while, the bird turns towards the ground. Touching the screen makes the bird turn upwards again. You are going to imitate this behavior in Hoppy Bunny!
@@ -198,5 +218,6 @@ You've made some real progress in this chapter and learnt to:
 - Importing additional Swift functionality
 - Clamping values to a range
 - Learnt about *delta* and adding time counters
+- Add sound using *SKAction*
 
 Hopping up and down is fun, but it would be even better if there was a sense of movement. In the next chapter you are going to get things moving.

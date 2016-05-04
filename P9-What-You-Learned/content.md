@@ -23,6 +23,8 @@ At the beginning of the Hoppy Bunny tutorials you learned how to create your fir
 
 - **Sprite frame action animations**: You can create sprite frame animations in the Timeline, using *SKActions* such as *AnimateWithTextures*.
 
+- **Sound timeline action**:  You can add sound effects in the Timeline, using the *SKAction* *playSoundFileNamed*.
+
 ##Letting the Bunny Fall
 
 - **Static physics bodies**: Static physics bodies never move. They are great for ground and obstacles.

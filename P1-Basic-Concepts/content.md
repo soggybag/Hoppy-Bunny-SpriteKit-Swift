@@ -26,11 +26,17 @@ Time to get started and make a new SpriteKit project in Xcode and get started wi
 ##Adding artwork
 
 > [action]
-> After the project is created, you should [download our art pack for this game](https://github.com/MakeSchool-Tutorials/Hoppy-Bunny-SpriteKit-Swift/raw/master/assets.zip).
+> After the project is created, you should [Download the Art Pack](https://github.com/MakeSchool-Tutorials/Hoppy-Bunny-SpriteKit-Swift/raw/master/assets.zip).
 > Next you will add the art pack you just downloaded to your Xcode project by first unpacking the archive.
 > Select the `Assets.xcassets` folder in Xcode project navigator, then drag the downloaded assets into Xcode as shown below:
 >
 > ![Dragging assets into project](../Tutorial-Images/xcode_add_artwork.png)
+
+##Adding Sound Effects
+
+> [action]
+> Download the [SFX Pack](../SFX.zip) we created for you. Once the download is complete, unpack the folder and add
+it to the project.
 
 ##Asset Scale
 
