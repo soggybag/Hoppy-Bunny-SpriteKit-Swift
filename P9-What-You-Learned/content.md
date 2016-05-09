@@ -1,5 +1,5 @@
 ---
-title: "What you have learned"
+title: What you have learned
 slug: what-you-learned
 ---
 
@@ -78,3 +78,7 @@ At the beginning of the Hoppy Bunny tutorials you learned how to create your fir
 [Download Hoppy Bunny](https://github.com/MakeSchool-Tutorials/Hoppy-Bunny-SpriteKit-Swift-Solution).
 
 [GitHub Cat](https://static.makegameswith.us/gamernews_images/TVZ2mTmQpl/labtocat.png)
+
+#Bonus stage
+
+If you've made it this far you're ready to face the **bonus stage**, although this content is optional.  I would highly recommend it as it will generate ideas for your own game ideas and give you some essential practical experience.  The challenges are designed to help you round off your game.
