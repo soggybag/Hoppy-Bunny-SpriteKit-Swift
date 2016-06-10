@@ -69,7 +69,7 @@ Run your game... The bunny will now collide with the obstacles yet thankfully be
 
 #Physics Contact Delegate
 
-If the bunny collides with the ground, an obstacle or passes through the goal of an obstacle, you want to know about.  Next you will implement the *Physics Contact Delegate* so your code will be informed whenever one of these collision contacts takes place.
+If the bunny collides with the ground, an obstacle or passes through the goal of an obstacle, you want to know about it.  Next you will implement the *Physics Contact Delegate* so your code will be informed whenever one of these collision contacts takes place.
 
 > [action]
 > Open *GameScene.swift*, you need to declare that the *GameScene* class will implement the *SKPhysicsContactDelegate* protocol methods.
@@ -121,7 +121,7 @@ This might consist of:
 
 ##Adding a button
 
-There is no easy way to add a button in SpriteKit so you will need to get creative and create our own solution.  Only joking, we've kindly provided a starting point for you with a custom class called *MSButtonNode*.
+There is no easy way to add a button in SpriteKit so you will need to get creative and create your own solution.  Only joking, we've kindly provided a starting point for you with a custom class called *MSButtonNode*.
 
 > [action]
 > [Download MSButtonNode](https://raw.githubusercontent.com/MakeSchool-Tutorials/Hoppy-Bunny-SpriteKit-Swift-Solution/master/HoppyBunny/MSButtonNode.swift) and drag this file into your project.
@@ -205,7 +205,7 @@ It would be really useful to know the current state of the game.  Has the game s
 
 #Game State
 
-State management is a great way to do this, just look intp the `MSButtonNode` code above.  A `state` property is used to track if the button is `Active,Hidden or Selected`.
+State management is a great way to do this, just look into the `MSButtonNode` code above.  A `state` property is used to track if the button is `Active,Hidden or Selected`.
 
 For the *GameScene* class it would be great to know if the game state is either `Active` or `GameOver`.  
 
@@ -267,13 +267,13 @@ func didBeginContact(contact: SKPhysicsContact) {
 }
 ```
 
-Notice the check of the **gameState** to ensure that the code will not be called more than once, when the player has died.  The bunnies physics are effectively disabled by stopping `rotation`, reseting `angularVelocity` and removing the flapping asprite frame animation with the use of `removeAllActions()` method.  The button is then activated and presented to the player  with a simple `MSButtonNodeStateActive` state change.
+Notice the check of the **gameState** to ensure that the code will not be called more than once, when the player has died.  The bunnies physics are effectively disabled by stopping `rotation`, reseting `angularVelocity` and removing the flapping sprite frame animation with the use of `removeAllActions()` method.  The button is then activated and presented to the player  with a simple `MSButtonNodeStateActive` state change.
 
 Run the game... When the player dies the button should appear and you can restart play.  
 
 #Shutting down the world
 
-It's not perfect yet as the bunny will still respond every so slightly to touch and the world will continue to scroll by.
+It's not perfect yet as the bunny will still respond ever so slightly to touch and the world will continue to scroll by.
 
 To disable scrolling and touch, you can once again make use of the *gameState* property.
 
@@ -411,7 +411,7 @@ Run the game... That little change has made the core mechanic feel much more sat
 Wow, a lot of ground has been covered in this chapter:
 
 - Understanding the principles of SpriteKit physics collision and contact masking
-- Implementing the `SKPhysicsContactDelegate` so you are informed of collision conacts.
+- Implementing the `SKPhysicsContactDelegate` so you are informed of collision contacts.
 - Creating your own custom button class
 - Implementing a simple game state manager
 - Running a custom *SKAction* and creating reusable *SKActions* visually
