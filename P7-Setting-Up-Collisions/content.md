@@ -247,7 +247,7 @@ Great you now have some rudimentary game management in place, time to kill the b
 func didBeginContact(contact: SKPhysicsContact) {
   /* Ensure only called while game running */
   if gameState != .Active { return }
-
+>
   /* Hero touches anything, game over */
 >
   /* Change game state to game over */
