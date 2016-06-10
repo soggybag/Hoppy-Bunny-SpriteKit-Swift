@@ -55,7 +55,7 @@ override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
   /* Called when a touch begins */
 >
   /* Apply vertical impulse */
-  hero.physicsBody?.applyImpulse(CGVectorMake(0, 300))
+  hero.physicsBody?.applyImpulse(CGVectorMake(0, 250))
 ```
 > You are applying an impulse to the *hero's* `physicsBody`.  Think of an impulse like being hit by a baseball bat.
 > In this case a short vertical burst to make the bunny move vertically.
@@ -130,7 +130,7 @@ There are a couple of things you will need to do to achieve this:
 > The first step is to add a property to keep track of the time since the last touch. Add this declaration just after our hero property declaration.
 >
 ```
-var sinceTouch : CCTime = 0
+var sinceTouch : CFTimeInterval = 0
 ```
 >
 > Next add this code to the `touchBegan(...)` method, after the application of vertical impulse `applyImpulse(...)`
@@ -175,7 +175,7 @@ if sinceTouch > 0.1 {
 }
 >
 /* Clamp rotation */
-hero.zRotation.clamp(CGFloat(-90).degreesToRadians(),CGFloat(30).degreesToRadians())
+hero.zRotation.clamp(CGFloat(-20).degreesToRadians(),CGFloat(30).degreesToRadians())
 hero.physicsBody?.angularVelocity.clamp(-2, 2)
 >
 /* Update last touch timer */

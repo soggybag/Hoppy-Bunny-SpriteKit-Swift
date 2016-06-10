@@ -1,5 +1,5 @@
 ---
-title: You've go to let the bunny fly!
+title: You've got to let the bunny fly!
 slug: bunny-physics
 ---
 
@@ -8,7 +8,7 @@ Time to setup physics for your game world and game play objects.
 #SpriteKit Physics
 
 You will be using the powerful physics engine built into SpriteKit, thankfully it's as easy as ticking a box to enable physics for each of our game objects.
-I recommend you have a read of [Apple's Physics Documentation](https://developer.apple.com/library/ios/documentation/GraphicsAnimation/Conceptual/SpriteKit_PG/Physics/Physics.html#//apple_ref/doc/uid/TP40013043-CH6-SW1) as physics plays a key role in many games, a game may not even appear to be physics based yet will often use physics for collision detection as this on its own is a powerful feature.
+I recommend you take some time to read [Apple's Physics Documentation](https://developer.apple.com/library/ios/documentation/GraphicsAnimation/Conceptual/SpriteKit_PG/Physics/Physics.html#//apple_ref/doc/uid/TP40013043-CH6-SW1). Physics plays a key role in many games, even those that might not seem to use physics might use the physics engine for collision detection!
 
 ##Make the ground static
 
@@ -55,7 +55,7 @@ I recommend you have a read of [Apple's Physics Documentation](https://developer
 
 ##Gravity
 
-If you click outside of our *GameScene* yellow box and check the *Attributes inspector* you will see our physics world will default to approx Earth's gravity `-9.8`.
+If you click outside of our *GameScene* yellow box and check the *Attributes inspector* you will see our physics world will default to approximately Earth's gravity `-9.8`.
 ![GameScene Gravity](../Tutorial-Images/xcode_gamescene_gravity.png)
 
 > [info]

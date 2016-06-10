@@ -22,21 +22,34 @@ Time to get started and make a new SpriteKit project in Xcode and get started wi
 > Your first step is to create a new SpriteKit Xcode project, open Xcode and select `Create a new Xcode project`. Then select `iOS > Application > Game` as shown below:
 >
 > ![Select New game project](../Tutorial-Images/xcode_new_project.png)
+>
+1. Enter `HoppyBunny` for `Product Name`.
+1. For `Organization Name` you can enter your name, your fake company name, or `Make School`
+1. For `Organization Identifier`, you use a reverse domain name style base for your apps. If you own `supercoolsecretstudios.com` you would put `com.supercoolsecretstudios`. If you don't own a domain name, feel free to put `com.makeschool` for this project.
+1. Select `Swift` as the `Language`
+1. Select `SpriteKit` (not `SceneKit`!) as the `Game Technology`
+1. Select `iPhone` as the `Devices`
+1. Leave `Include Unit Tests` and `Include UI Tests` unchecked
+>
+> ![Naming your project](../Tutorial-Images/xcode_new_project2.png)
 
 ##Adding artwork
 
 > [action]
-> After the project is created, you should [Download the Art Pack](https://github.com/MakeSchool-Tutorials/Hoppy-Bunny-SpriteKit-Swift/raw/master/assets.zip).
-> Next you will add the art pack you just downloaded to your Xcode project by first unpacking the archive.
-> Select the `Assets.xcassets` folder in Xcode project navigator, then drag the downloaded assets into Xcode as shown below:
 >
-> ![Dragging assets into project](../Tutorial-Images/xcode_add_artwork.png)
+1. After the project is created, you should [Download the Art Pack](https://github.com/MakeSchool-Tutorials/Hoppy-Bunny-SpriteKit-Swift/raw/master/assets.zip).
+1. Add the art pack you just downloaded to your Xcode project by first unpacking the archive.
+1. Select the `Assets.xcassets` folder in Xcode project navigator
+1. Delete the `Spaceship` asset by clicking on it and pressing `delete` on your keyboarda
+1. Drag the downloaded assets into Xcode
+>
+> ![Dragging assets into project](../Tutorial-Images/add_assets.gif)
 
 ##Adding Sound Effects
 
 > [action]
-> Download the [SFX Pack](https://github.com/MakeSchool-Tutorials/Hoppy-Bunny-SpriteKit-Swift/raw/master/SFX.zip) we created for you. Once the download is complete, unpack the folder and add
-it to the project.
+> Download the [SFX Pack](../SFX.zip) we created for you. Once the download is complete, unzip the folder and add
+it to the project by dragging the entire unzipped folder into Xcode like this: ![Dragging in assests](../Tutorial-Images/add_sfx.gif)
 
 ##Asset Scale
 

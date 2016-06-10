@@ -3,7 +3,7 @@ title: Set up the Game Scene
 slug: setup-gameplay
 ---
 
-Let's get started setting up the main game scene, SpritKit Scene Editor is a powerful Xcode tool that lets you rapidly layout the scene.
+Let's get started setting up the main game scene, SpriteKit Scene Editor is a powerful Xcode tool that lets you rapidly layout the scene.
 
 #Setting the stage
 
@@ -28,7 +28,9 @@ Thankfully SpriteKit has your back and can automatically scale the view to fit o
 scene.scaleMode = .AspectFill
 ```
 >
-> If you `highlight` *scaleMode* and look at the *Quick Help inspector* panel you can find out more about the scaling options available.
+> If you `highlight` *scaleMode* and look at the *Quick Help inspector* panel you can find out more about the scaling options available. ![Quick help inspector](../Tutorial-Images/quick_help_inspector.png)
+>
+Alternatively, you can hold `option` and click on `scaleMode`. Both of these features will help you get a better understanding of code throughout all your projects in Xcode!
 >
 
 ##Add the background

@@ -15,7 +15,7 @@ To control the speed of this conveyor belt you will want to add a new *scrollSpe
 > Add the following line to *GameScene.swift* after the *fixedDelta* property:
 >
 ```
-let scrollSpeed: CGFloat = 100
+let scrollSpeed: CGFloat = 160
 ```
 >
 
@@ -31,7 +31,7 @@ to modify the *GameScene* to create a virtual layer for all the objects you wish
 > ![Add empty node](../Tutorial-Images/xcode_add_empty_node_scroll.png)
 >
 
-Next you need to create a conde connection for the *scrollLayer*
+Next you need to create a code connection for the *scrollLayer*
 
 > [action]
 > Open *GameScene.swift* and add the following after the `hero` property declaration.
