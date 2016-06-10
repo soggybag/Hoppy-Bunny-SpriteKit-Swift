@@ -196,7 +196,7 @@ Great you have a button, as it's bang in the middle of the screen it might be an
 >
 ```
 /* Hide restart button */
-buttonRestart.state = .MSButtonNodeStateHidden
+buttonRestart.state = .Hidden
 ```
 >
 
@@ -263,7 +263,7 @@ func didBeginContact(contact: SKPhysicsContact) {
   hero.removeAllActions()
 >
   /* Show restart button */
-  buttonRestart.state = .MSButtonNodeStateActive
+  buttonRestart.state = .Active
 }
 ```
 
