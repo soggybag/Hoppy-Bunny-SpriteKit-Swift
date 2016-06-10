@@ -67,11 +67,10 @@ func scrollWorld() {
 >
 > Then add the following to the bottom of your `update(...)` method:
 >
-```
+```swift
 /* Process world scrolling */
 scrollWorld()
 ```
->
 
 <!-- -->
 
