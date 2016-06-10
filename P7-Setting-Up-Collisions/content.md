@@ -311,6 +311,8 @@ let heroDeath = SKAction.runBlock({
 >
     /* Put our hero face down in the dirt */
     self.hero.zRotation = CGFloat(-90).degreesToRadians()
+    /* Stop hero from colliding with anything else */
+    self.hero.physicsBody?.collisionBitMask = 0
 })
 >
 /* Run action */
@@ -341,7 +343,7 @@ It would be nice to add an old school style Star Trek camera shake to emphasize 
 >
 > ![Add Move Action](../Tutorial-Images/xcode_spritekit_action_add_move.png)
 >
-> **Sadly it does not yet seem possible (As of Xcode 7.2.1) to preview this action on the scene from within the scene editor :[**
+> **Sadly it does not yet seem possible (As of Xcode 7.3.1) to preview this action on the scene from within the scene editor :[**
 >
 > Copy and paste this action two times and then modify all three actions as follows.
 >

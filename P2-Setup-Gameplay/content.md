@@ -47,7 +47,7 @@ Alternatively, you can hold `option` and click on `scaleMode`. Both of these fea
 <!--  -->
 
 > [info]
-> A really handy feature is to use object snapping, *Hold down shift* **(behavior as of Xcode 7.2.1)** while dragging your game objects and you will notice it will snap against existing scene objects.  Try moving it around and you will notice it will snap to the left hand edge of the scene, giving you that perfect center point position.
+> A really handy feature is to use object snapping, *Hold down shift* **(behavior as of Xcode 7.3.1)** while dragging your game objects and you will notice it will snap against existing scene objects.  Try moving it around and you will notice it will snap to the left hand edge of the scene, giving you that perfect center point position.
 >
 
 ##Add the ground image
