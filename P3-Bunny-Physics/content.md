@@ -130,7 +130,7 @@ You can easily set the *Z-Position* of your sprites in the *Attributes inspector
 ![Modify Z Position](../Tutorial-Images/xcode_zorder_modify.png)
 
 > [action]
-> Keep it logical, imagine you are painting a scene, work from the back to the front. Set the **background** to `-1` then let's ensure the crystals and ground are on top of the background by setting them to `0` and then put our bunny on top of everything with a value of `2`.
+> Keep it logical, imagine you are painting a scene, work from the back to the front. Set the **background** to `-1` then let's ensure the crystals and ground are on top of the background by setting them to `0` and then put our bunny on top of everything with a value of `2` (make sure to set the z-order of the bunny in Hero.sks!).
 
 Run the project again and it should look perfect now.
 

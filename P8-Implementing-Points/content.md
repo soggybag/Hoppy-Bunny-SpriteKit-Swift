@@ -76,7 +76,7 @@ The next part takes a little bit of extra work, as it stands if the bunny collid
 However in this example you will be using the *name* of the node.
 
 > [action]
-> Open *GameScene.swift* and add this code to the start of the `didBeginContact(...)` method, before the `gameState` check.
+> Open *GameScene.swift* and add this code to the start of the `didBeginContact(...)` method, after `gameState` check.
 >
 ```
 /* Get references to bodies involved in collision */
