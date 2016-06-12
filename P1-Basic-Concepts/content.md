@@ -48,7 +48,7 @@ Time to get started and make a new SpriteKit project in Xcode and get started wi
 ##Adding Sound Effects
 
 > [action]
-> Download the [SFX Pack](../SFX.zip) we created for you. Once the download is complete, unzip the folder and add
+> Download the [SFX Pack](https://github.com/MakeSchool-Tutorials/Hoppy-Bunny-SpriteKit-Swift/raw/master/SFX.zip) we created for you. Once the download is complete, unzip the folder and add
 it to the project by dragging the entire unzipped folder into Xcode like this: ![Dragging in assests](../Tutorial-Images/add_sfx.gif)
 
 ##Asset Scale
