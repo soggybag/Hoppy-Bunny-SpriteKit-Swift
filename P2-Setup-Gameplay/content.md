@@ -82,7 +82,6 @@ Now you're going to create a new *SpriteKit Scene File* for the bunny and animat
 > Because bunnies are heroes, save the file as `Hero.sks`
 >
 > ![Saving the SpriteKit Scene fike](../Tutorial-Images/xcode_add_sks_hero.png)
->)
 
 ##Add the bunny
 
@@ -103,7 +102,7 @@ Now you're going to create a new *SpriteKit Scene File* for the bunny and animat
 
 > [info]
 > Personally I dislike using the huge default scene size, when only dealing with a single asset. It can also cause unexpected position issues later on when using it as a referenced object.
-> Click anywhere other than the bunny itself and set the scene *Size* (as you previously did with the *GameScene*) to `(16,16)`.  Why `(16,16)`, this is the *Size* of the *bunny* sprite.
+> Click anywhere other than the bunny itself and set the scene *Size* (as you previously did with the *GameScene*) to `(16,16)`.  Why `(16,16)`? This is the *Size* of the *bunny* sprite.
 > Set the *Anchor Point* to `(0.5,0.5)`
 
 ##Animating the bunny
