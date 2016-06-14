@@ -75,7 +75,7 @@ If the bunny collides with the ground, an obstacle or passes through the goal of
 > Open *GameScene.swift*, you need to declare that the *GameScene* class will implement the *SKPhysicsContactDelegate* protocol methods.
 > To learn more about *Protocols* and *Delegates* please check out our [Swift Concepts Guide](https://www.makeschool.com/tutorials/swift-concepts-explained).
 >
-> You declare that a class is implementing this protocol in Swift by appending *CKPhysicsContactDelegate* after the class' super class *SKScene*, separated by a comma, as shown:
+> You declare that a class is implementing this protocol in Swift by appending *SKPhysicsContactDelegate* after the class' super class *SKScene*, separated by a comma, as shown:
 >
 ```
 class GameScene: SKScene, SKPhysicsContactDelegate {
