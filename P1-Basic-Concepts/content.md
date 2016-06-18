@@ -40,7 +40,7 @@ Time to get started and make a new SpriteKit project in Xcode and get started wi
 1. After the project is created, you should [Download the Art Pack](https://github.com/MakeSchool-Tutorials/Hoppy-Bunny-SpriteKit-Swift/raw/master/assets.zip).
 1. Add the art pack you just downloaded to your Xcode project by first unpacking the archive.
 1. Select the `Assets.xcassets` folder in Xcode project navigator
-1. Delete the `Spaceship` asset by clicking on it and pressing `delete` on your keyboarda
+1. Delete the `Spaceship` asset by clicking on it and pressing `delete` on your keyboard
 1. Drag the downloaded assets into Xcode
 >
 > ![Dragging assets into project](../Tutorial-Images/add_assets.gif)
