@@ -40,15 +40,14 @@ Alternatively, you can hold `option` and click on `scaleMode`. Both of these fea
 >
 > ![Adding background image](../Tutorial-Images/xcode_gamescene_add_background.png)
 >
-> You want to centre the background on the screen, you can do this by setting the *Position* to `(160, 240)` which is exactly half of the scene size values or drag it the image around by hand.
+> You want to center the background on the screen, you can do this by setting the *Position* to `(160, 240)` which is exactly half of the scene size values or drag it the image around by hand.
 >
 > When you add an object to the game scene this way a *Color Sprite* object is added to the scene and the texture property is pre populated with the texture name of the asset you dragged in.
 
 <!--  -->
 
 > [info]
-> A really handy feature is to use object snapping, *Hold down shift* **(behavior as of Xcode 7.3.1)** while dragging your game objects and you will notice it will snap against existing scene objects.  Try moving it around and you will notice it will snap to the left hand edge of the scene, giving you that perfect center point position.
->
+> By default when you move an object it will use the handy snapping feature.  Sometimes you don't want this behavior, you can *Hold down shift* while dragging an object to disable snapping.
 
 ##Add the ground image
 

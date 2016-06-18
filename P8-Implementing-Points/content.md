@@ -117,4 +117,4 @@ In this chapter you learned to:
 - Manage the player score
 - Identifying specific physics collisions
 
-The next chapter will be a recap of everything you have covered so far, well done.
+The next chapter will cover the steps to test your game on device.

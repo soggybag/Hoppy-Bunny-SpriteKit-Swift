@@ -27,3 +27,5 @@ But wait! Thats not all! Apple is very serious about security, and when you `sid
 1. Click `Trust` again.
 
 Great! Now you should be able to run the app. Try hitting the run button in _Xcode_ again! If you want to run it in the simulator later, you can select the simulator in the same way you selected your device earlier!
+
+The next chapter will be a recap of everything you have covered so far, well done.
