@@ -64,7 +64,3 @@ If you run the game under iPhone 6/6S Plus and look closely you will see that th
 > Why do you think this is and can you solve it?
 
 **Note:** Universal device support will be covered in greater detail in the Peeved Penguins tutorial.
-
-#Summary
-
-Congratulations on completing the bonus stage!
