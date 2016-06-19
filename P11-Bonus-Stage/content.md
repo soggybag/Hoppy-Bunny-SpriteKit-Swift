@@ -56,6 +56,15 @@ The current implementation of *MSButtonNode* is intentionally simple, it would b
 
 If you make a nice *MSButtonNode* you should use it to enhance your own game projects.
 
+#Device scaling and anchoring
+
+If you run the game under iPhone 6/6S Plus and look closely you will see that the restart button and score counter are positioned slightly to the right, instead of dead center.
+
+> [challenge]
+> Why do you think this is and can you solve it?
+
+**Note:** Universal device support will be covered in greater detail in the Peeved Penguins tutorial.
+
 #Summary
 
 Congratulations on completing the bonus stage!

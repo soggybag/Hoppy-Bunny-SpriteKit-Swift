@@ -88,7 +88,7 @@ Oh no scrolling?  Now that you have a virtual conveyor belt system, you need to 
 > [action]
 > Open *GameScene.sks*, select the *ground* node in the scene editor and set the *Parent* value to `scrollLayer`, this modifies the hierarchy of the scene graph.  The *ground* node a child of the *scrollLayer* and thus any scrolling applied to the *scrollLayer* will affect any child nodes.
 >
-> ![Modify sprite parent](../Tutorial-Images/xcode_spritekit_add_more_ground.png)
+> ![Ground Node](../Tutorial-Images/xcode_spritekit_add_ground.png)
 >
 
 Run the game...  The ground should be scrolling, keep watching...
@@ -101,7 +101,7 @@ Run the game...  The ground should be scrolling, keep watching...
 
 Argh eventually you will run out of ground and the bunny will fall into the endless despair of the abyss.
 
-You can make the ground loop by adding a second ground sprite and implementing an endless scrolling technique using both ground sprites. When a ground sprite leaves the left edge you'll move it back to the right edge of the screen to make the ground seem endlessly repeating.
+You can improve the ground loop by adding on a second ground sprite and implementing an endless scrolling technique using both ground sprites. When a ground sprite leaves the left edge you'll move it back to the right edge of the screen to make the ground seem endlessly repeating.
 
 The first step will be adding a second ground sprite to the *GameScene.sks*
 
@@ -109,6 +109,7 @@ The first step will be adding a second ground sprite to the *GameScene.sks*
 > Duplicate the existing *ground* by `Edit -> Copy` then `Edit -> Paste`. This way all the properties of ground are already setup.
 > You should snap it to the end of the first ground piece.
 >
+> ![Ground Nodes](../Tutorial-Images/xcode_spritekit_add_more_ground.png)
 
 Run the game...
 
