@@ -5,9 +5,9 @@ slug: getting-started
 
 #What you will learn
 
-This tutorial will teach you how to implement a Flappy Bird clone for iOS using Apple's new Swift programming language together with SpriteKit, their game development framework.
+This tutorial will teach you how to implement a Flappy Bird clone for iOS using Apple's new Swift programming language together with SpriteKit, Apple's 2D game development framework.
 
-If you complete this tutorial you will learn how to:
+Upon completion of this tutorial you will have learned how to:
 
 - Implement an endless scroller
 - Implement procedural level generation
