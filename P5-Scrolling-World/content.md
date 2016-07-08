@@ -41,6 +41,7 @@ var scrollLayer: SKNode!
 
 Next we need to create the code connection to the Scene Editor object. This step is very similar to creating the *hero* code connection, although this time there is no need to do a recursive node search as this node sits directly below the *GameScene*.
 
+> [action]
 > Add the following after the *hero* node connection code.
 >
 ```
@@ -92,7 +93,7 @@ Oh, no scrolling?  Now that we have a virtual conveyor belt system, we need to p
 
 Run the game. The ground should be scrolling, keep watching...
 
-> ![Ground scroll](../Tutorial-Images/animated_scroll_ground.gif)
+![Ground scroll](../Tutorial-Images/animated_scroll_ground.gif)
 
 *Note: the crystals look weird in the image above due to color range compression. Yours will look different.*
 
