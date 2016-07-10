@@ -3,7 +3,7 @@ title: Adding obstacles
 slug: adding-obstacles
 ---
 
-You are going to be creating obstacles for the player to navigate and implementing a mechanic to randomize their position to challenge the player.
+Let's create obstacles for the player to navigate, and implement a mechanic to randomize their position to make the game more challenging.
 
 #Creating the obstacle
 
@@ -15,20 +15,20 @@ You are going to be creating obstacles for the player to navigate and implementi
 >
 > ![Saving the SKS File](../Tutorial-Images/xcode_add_sks_obstacle.png)
 
-You will be constructing the obstacle with two carrots, one at the top and one at the bottom and a special invisible *Color Sprite* between the carrots, which you will later use to score the player.
+We will be constructing the obstacles with two carrots, one at the top and one at the bottom of the screen. We will also include a special invisible *Color Sprite* between the carrots, which we will use to detect when the player has passed between the carrots, so that we may increase their score.
 
 > [action]
 > Modify the size and anchor point of this new obstacle scene properties as shown:
 > ![Modify the obstacle scene size](../Tutorial-Images/xcode_obstacle_scene_size.png)
-> Set the *Anchor Point* to `(0.5,0.5)` and *Size* to `(51,768)`.
+> Set the *Anchor Point* to `(0.5, 0.5)` and *Size* to `(51, 768)`.
 >
-> Drag *carrot_top.png* and *carrot_bottom.png* from your *Media Library*, and snap the carrots in place.
-> Next add a *Color Sprite* from the object library and position it in between the carrot's as shown:
+> Drag *carrot_top.png* and *carrot_bottom.png* from your *Media Library*, and snap the carrots in place. The bottom carrot should be at position `(0, -216)` an the top carrot at position `(0, 216)`.
+> Next add a *Color Sprite* from the object library and position it in between the carrots as shown, with size `(51, 100)` and position `(0, 2)`.
 > Set the *Name* to `goal`
 >
 > ![Add the goal sprite](../Tutorial-Images/xcode_obstacle_goal_sprite.png)
 >
-> You want to change the color values of the sprite to be transparent as the player does not need to see it, it acts as an invisible sensor or trigger. This will be discussed in more detail in the next chapter.
+> We want to change the color value of the sprite to be transparent as we don't want the player to be able to see it. It will act as an invisible sensor or trigger, for when the bunny moves through it. This will be discussed in more detail in the next chapter.
 >
 > Your final obstacle should look something like this:
 >
@@ -38,9 +38,8 @@ You will be constructing the obstacle with two carrots, one at the top and one a
 <!-- -->
 
 > [info]
-> So how did I know that the scene size should be exactly `51` pixels wide and `768` tall? Well I, sometimes you
-> need to have a play in the visual editor and then adjust, I saw the carrot's had a width of `51` so I used that value.
-> The default height of `768` (iPhone 5) was no coincidence as the assets were designed to fill an iPhone 5 screen height, leaving a suitable `100` pixel gap for the player to pass through.
+> So how did I know that the obstacle scene should be exactly `51` pixels wide and `768` tall? Well, sometimes you just need to play around in the visual editor and then adjust. In this case, I saw the carrots had a width of `51`, so I used that value.
+> The default height of `768` (iPhone 5) was no coincidence, as the assets were designed to fill an iPhone 5 screen height, leaving a suitable `100` pixel gap for the player to pass through.
 
 <!-- -->
 
@@ -50,22 +49,22 @@ You can test if you've setup the obstacle correctly by adding it to the *GameSce
 
 > [action]
 > Open *GameScene.sks* and drag *Obstace.sks* into the scene, if you don't see anything, do a quick *Save* to refresh SpriteKit.
->
-> I'm sure you noticed the obstacle is sitting behind the crystals, you will want it to sit in front of the crystals yet also sit behind the ground.  
 
-Can you fix this? Remember you've ran into similar *Z-Position* issues when you initially setup the scene.
+You may have probably noticed the obstacle is sitting behind the crystals. We will want it to sit in front of the crystals, but sit behind the ground.  
+
+> [action]
+> If you have this problem, can you fix it? Remember we ran into similar *Z-Position* issues when we set up the scene initially.
 
 > [solution]
-> Tweak the *scrollLayer* which contains the ground nodes, set *Z-Position* to `2` and set the *Obstacle* reference node to `1`.
+> Tweak the *scrollLayer* which contains the ground nodes, set *Z-Position* to `2` and set the *Obstacle* reference node *Z-position* to `1`.
 
-Now this hopefully look a lot like this.
+Now your scene will hopefully look a lot like this.
 
 ![Checking the obstacles](../Tutorial-Images/xcode_obstacle_added_gamescene.png)
 
 #Dynamic obstacle generation
 
-Time to learn about dynamic obstacle generation or DOG for short :]
-The *Obstacle.sks* you built will come in very hand now, you could of course design a huge level if you wanted to and manually place them to design a level.  However, for an infinite runner this just isn't practical.
+Now it's time to learn about dynamic obstacle generation, or _DOG_ for short. Of course, we could design a huge level if we wanted to, and in it we could manually place each obstacle. However, for an infinite runner this just isn't practical.
 
 ##Obstacle layer
 
@@ -73,25 +72,23 @@ It would be useful to add another virtual layer to contain the obstacles.
 
 > [action]
 > Open *GameScene.sks* open and drag an *Empty* node into the scene.
-> Set the position to `(0,0)`, *Z-Position* to `1` and *Name* to `obstacleLayer`
+> Set the position to `(0, 0)`, *Z-Position* to `1` and *Name* to `obstacleLayer`
 >
 > ![Creating the obstacle layer node](../Tutorial-Images/xcode_add_obstacle_layer.png)
 >
-> Next set the obstacle reference node's parent to the *ObstacleLayer*:
+> Next, set the obstacle reference node's parent to *ObstacleLayer*:
 > ![Set obstacle parent](../Tutorial-Images/xcode_obstacle_modify_parent.png)
 
 <!-- -->
 
 > [info]
-> It can sometimes be tricky to select nodes in the editor when they are on top of each other, an awesome tip that not everyone is aware of is to use the scene hierarchy selector:
+> It can sometimes be tricky to select nodes in the editor when they are on top of each other. To work around this problem you can use the scene hierarchy selector at the top:
 >
 > ![Selecting nodes](../Tutorial-Images/xcode_node_selection_tip.png)
->
-> You can thank me later :]
 
 ##Connecting the obstacle layer
 
-You'll need to code connect the obstacle layer object.
+We need some code so that we can reference the obstacle layer in the game's logic.
 
 > [action]
 > Open *GameScene.swift*
@@ -101,7 +98,7 @@ You'll need to code connect the obstacle layer object.
 var obstacleLayer: SKNode!
 ```
 >
-> Add the following code after the *Scroll Layer* connection:
+> Add the following code after we set up the *Scroll Layer* connection:
 >
 ```
 /* Set reference to obstacle layer node */
@@ -110,9 +107,9 @@ obstacleLayer = self.childNodeWithName("obstacleLayer")
 
 ##Spawn Timer
 
-You will add a timer property to help manage the rate of obstacle generation, too slow it's boring, too fast it's too hard.
+We'll add a timer property to help us manage the rate of obstacle generation. If it's too slow, it'll be boring, but if it's too fast it'll be too hard.
 
-> Add the following code after the *sinceTouch* property declaration:
+> Add the following after the *sinceTouch* property declaration:
 >
 ```
 var spawnTimer: CFTimeInterval = 0
@@ -121,7 +118,7 @@ var spawnTimer: CFTimeInterval = 0
 
 #Obstacle scrolling
 
-You are going to create another conveyor belt solution for the newly added *ObstacleLayer*.
+We are going to create another conveyor belt style solution for the newly added *ObstacleLayer*.
 
 > [action]
 > Open *GameScene.swift* and add the following method to the *GameScene* class:
@@ -150,9 +147,12 @@ func updateObstacles() {
  }
  ```
 
-This code should look familiar to the *ScrollLayer*, this time when an obstacle has left the scene, there is no longer any need for it.  So it will be removed with the `removeFromParent()` method.
+This code should look somewhat similar to the `scrollWorld()` method. Unlike the ground in `scrollWorld()`, when an obstacle has left the scene, there is no longer any need for it, so we remove it with the `removeFromParent()` method.
 
-Can you modify your game code to call the `updateObstacles()` method every frame?
+> [action]
+> Can you modify your game code to call the `updateObstacles()` method once every frame?
+
+<!-- html comment to break boxes -->
 
 > [solution]
 > As with the `scrollWorld()` method, add the following to the `update(...)` method, after the `scrollWorld()` method.
@@ -162,17 +162,16 @@ Can you modify your game code to call the `updateObstacles()` method every frame
 updateObstacles()
 ```
 
-Run the game... You should see the first obstacle scroll past, sadly the conveyor only has one obstacle, let's make it a bit more challenging.
+Run the game! You should see the first obstacle scroll past, but sadly our conveyor only has one obstacle. Let's make it a bit more challenging.
 
 #Spawning endless randomized obstacles
 
-The next task will be to continuously spawn obstacles till the end of time.
+The next task will be to continuously spawn obstacles until the end of time.
 
-Next you will implement a mechanic that spawns a new obstacles on a time schedule basis.  Feel free to play around with
-the timer and really challenge the player.
+We will implement a mechanic that spawns a new obstacle based on a timer. Feel free to play around with the timer and really challenge the player.
 
 > [action]
-> Add this code to the end of your *updateObstacles* method:
+> Add this code to the end of the *updateObstacles* method:
 >
 ```
 /* Time to add a new obstacle? */
@@ -194,33 +193,37 @@ if spawnTimer >= 1.5 {
 }
 ```
 
-In the code above, every `1.5` seconds a new obstacle instance is created from out *Obstacle.sks*, it is then moved just out of view and the **Y Position** is randomly set between the **min** value of `234` and a **max** value of `382` to mix things up a little.
+In the code above, a new obstacle instance is created from our *Obstacle.sks* every `1.5` seconds. It is then moved just out of view and the **Y Position** is randomly set between the **min** value of `234` and a **max** value of `382` to mix things up a little.
 
-When deciding these sorts of gameplay values, it's handy to go back to the *GameScene.sks* and check the **Y Position** of our obstacle.  Move it up and down and take note of the Y Position, then pick a range that looks good to you.
+When deciding these sorts of gameplay values, it's handy to go back to *GameScene.sks* and check the **Y Position** of our obstacle.  Move it up and down and take note of the Y Position, then pick a range that looks good to you.
 Once you are finished set your obstacle just outside of the scene view, this will be the first obstacle the player sees.
 
 > [info]
-> You know that feeling when you play a great game and the core mechanic feels just right? This is rarely a coincidence, expect to tweak game values and tinker with mechanics, get friends to feedback until the balance feels right.
+> You know that feeling when you play a great game and the core mechanic feels just right? This is rarely a coincidence; expect to tweak game values and tinker with mechanics. Get friends to give feedback until the balance feels right.
 
-Although you've added a *spawnTimer* property, it's not been setup to track time.
-Can you think of how to do this?
+Although we've added the `spawnTimer` property, we have a problem. It hasn't yet been set up to track time. It will just stay at the initial value of `0` the whole game. 
+
+> [action]
+Try to fix your code, so `spawnTimer`'s value increases as the game runs.
+
+<!-- html comment to break boxes -->
 
 > [solution]
-> Add the following line to the end of you `update(...)` method:
+> The trick is to add some time to the timer every time the `update(...)` method is called. In this case, we're using a `fixedDelta`, which is to say that we're assuming that time between every frame is the same. Add the following line to the end of the `update(...)` method:
 >
 ```
-spawnTimer+=fixedDelta
+spawnTimer += fixedDelta
 ```
 
-Now run your game...  You should obstacles being generated every `1.5` seconds and with varying vertical positions! You're getting closer to completing *Hoppy Bunny*!
+Now run the game! You should see obstacles being generated every `1.5` seconds and with varying vertical positions! We're getting closer to completing *Hoppy Bunny*!
 
 #Summary
 
-The gaming is really coming together now, you've learnt to:
+The game is really coming together now, you've learned to:
 
-- Building a multi object obstacle
-- Dynamically generating obstacles in the scene
-- Randomizing obstacle properties
-- Removing objects from a scene when no longer required
+- Build a multi-object obstacle
+- Dynamically generate obstacles in the scene
+- Randomize obstacle properties
+- Remove objects from a scene when they are no longer required
 
-In the next chapter you're going to implement physics based collision detection.
+In the next chapter we're going to implement physics based collision detection.
