@@ -15,7 +15,7 @@ I recommend you take some time to read [Apple's Documentation on Physics in Spri
 > [action]
 > Select the ground node, ensure the *Attributes inspector* is open and scroll down until you see the *Physics Definition* option.
 > Set the *Body Type* to `Bounding rectangle`, which will present you with the additional physics properties.
-> Make the body `static` by unchecking `dynamic`. There is no need for the ground to rotate, so uncheck `Allows Rotation`. There is also need for the ground to be affected by gravity, so deselect `Affected By Gravity`.
+> Make the body `static` by unchecking `dynamic`. There is no need for the ground to rotate, so uncheck `Allows Rotation`. There is also no need for the ground to be affected by gravity, so deselect `Affected By Gravity`.
 >
 > ![Create the static ground physics body](../Tutorial-Images/xcode_ground_physics.png)
 >
@@ -68,7 +68,7 @@ If you click outside of the *GameScene* yellow box and check the *Attributes ins
 >
 > ![Adding crystals](../Tutorial-Images/xcode_add_crystals.png)
 >
-> Snap it top the top of *ground*.
+> Snap it to the top of *ground*.
 
 
 #Check your progress
