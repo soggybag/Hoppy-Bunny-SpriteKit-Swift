@@ -104,8 +104,8 @@ Now we're going to create a new *SpriteKit Scene File* for the bunny. We're goin
 <!-- html comment to break boxes -->
 
 > [action]
-> Click anywhere other than the bunny itself and set the scene *Size* (as you previously did with the *GameScene*) to `(16,16)`.  Why `(16,16)`? This is the *Size* of the *bunny* sprite.
-> Set the *Anchor Point* to `(0.5,0.5)`
+> Click anywhere other than the bunny itself and set the scene *Size* (as you previously did with the *GameScene*) to `(33, 33)`.  Why `(33, 33)`? This is the *Size* of the *bunny* sprite.
+> Set the *Anchor Point* to `(0.5, 0.5)`
 
 ##Animating the bunny
 

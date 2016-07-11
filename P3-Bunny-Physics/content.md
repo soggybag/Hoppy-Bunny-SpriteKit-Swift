@@ -47,8 +47,6 @@ I recommend you take some time to read [Apple's Documentation on Physics in Spri
 > ![Enabling bunny physics](../Tutorial-Images/xcode_add_reference_node_hero.png)
 >
 > Set the position to `(80,280)`.
-> The bunny looks a little small in the scene, set the *Scale* properties to `(2,2)` to double the size of the bunny.
->
 
 <!--  -->
 
