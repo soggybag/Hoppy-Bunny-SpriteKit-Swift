@@ -41,44 +41,44 @@ At the beginning of the Hoppy Bunny tutorials you learned how to create your fir
 
 - **Variable Code connections**: Code connections allow you to access SpriteKit Scene objects in code. They are created in the Scene Editor and completed in the *Scenes* class file using the format `var connectionName: ConnectionType!`.
 
-- **Touch input**: Touches can be received by a node if you set `userInteractionEnabled` to `true` and override `touchBegan`.
+- **Touch input**: Touches can be received by a node if you set `userInteractionEnabled` to `true` and override `touchBegan(...)`.
 
-- **Update loop**: Update loops are called between every frame. They can be created by overriding `update`.
+- **Update loop**: Update loops are called between every frame. They can be created by overriding `update(...)`.
 
-- **Impulses**: `applyImpulse` adds directly to the velocity property of a physics body. `applyAngularImpulse` adds directly to the angular velocity property of a physics body.
+- **Impulses**: `applyImpulse()` adds directly to the velocity property of a physics body. `applyAngularImpulse()` adds directly to the angular velocity property of a physics body.
 
 ##Scrolling the World
 
-- **Implementing a conveyor belt**: You implemented a conveyor belt system by moving *Scrolling Layer* nodes with child objects attached such as Obstacles and ground.
+- **Implementing a conveyor belt**: You implemented a conveyor belt system by moving *Scrolling Layer* nodes with child objects attached such as `Obstacle`s and ground.
 
-- **Looping elements**: The ground was looped once it went off screen. You added a second ground image so that at least one full ground was always visible.
+- **Looping elements**: The ground was looped once it went off screen. You added a second ground image so that one full ground was always visible.
 
 ##Adding Obstacles
 
-- **Endless generation**: You generated obstacles using a timer so that there was one always waiting just off screen. Once an obstacle left the screen, you removed it.
+- **Endless generation**: You generated obstacles using a timer so that there was one always waiting just off screen. Once an obstacle left the screen, you removed it from the scene.
 
 - **Random placement**: When you generated an obstacle, you randomized it's y-position value.
 
 ##Setting Up Collisions
 
-- **Physics sensors**: Physics sensors detect and trigger collision events but do you physically affect the collisions. It's as if the physics bodies can pass through other physics bodies. These are useful for trigger events.
+- **Physics sensors**: Physics sensors detect and trigger collision events but do not physically affect the collisions. It makes it so physics bodies can pass through other physics bodies. These are useful for trigger events.
 
 - **Contact delegate**: You implement a contact delegate so your class can receive collision events from the physics engine.
 
-- **Game state**: It is useful to have a game state to manage the game e.g Active or Game Over
+- **Game state**: It is useful to have a game state to manage the game e.g Active or Game Over. You learned how to create an *enumeration* to specify the different states, and you created a `gameState` property to hold the game's current state.
 
 ##Implementing Scoring
 
-- **Goals using physics sensor**: Physics sensor goals were placed between obstacles so you can use the `didBeginContact` delegate method to detect when a player passed an obstacle.
+- **Goals using physics sensor**: Physics sensor goals were placed between obstacles so you can use the `didBeginContact(...)` delegate method to detect when a player passed an obstacle.
 
-- **Updating a label**: Converting numerical points scoring to a string for display via a label.
+- **Updating a label**: This included converting numerical points to a `String` for display in a label.
 
 #Solution
 
 [Download Hoppy Bunny](https://github.com/MakeSchool-Tutorials/Hoppy-Bunny-SpriteKit-Swift-Solution).
 
-[GitHub Cat](https://static.makegameswith.us/gamernews_images/TVZ2mTmQpl/labtocat.png)
+![GitHub Cat](https://static.makegameswith.us/gamernews_images/TVZ2mTmQpl/labtocat.png)
 
 #Bonus stage
 
-If you've made it this far you're ready to face the **bonus stage**, although this content is optional.  I would highly recommend it as it will generate ideas for your own game ideas and give you some essential practical experience.  The challenges are designed to help you round off your game.
+If you've made it this far you're ready to face the **bonus stage**, although this content is optional.  I would highly recommend it as it will generate ideas for your own game ideas and give you some essential practical experience.  The following challenges are designed to help you round out your game.
