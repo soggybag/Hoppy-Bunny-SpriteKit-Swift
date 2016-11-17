@@ -110,7 +110,7 @@ Adding sound effects is quite straight-forward in SpriteKit. You can make use of
 ```
 /* Play SFX */
 let flapSFX = SKAction.playSoundFileNamed("sfx_flap", waitForCompletion: false)
-self.runAction(flapSFX)
+self.run(flapSFX)
 ```
 >
 
