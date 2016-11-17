@@ -32,7 +32,7 @@ override func didMoveToView(view: SKView) {
   /* Set up your scene here */
 >
   /* Recursive node search for 'hero' (child of referenced node) */
-  hero = self.childNodeWithName("//hero") as! SKSpriteNode
+  hero = self.childNode(withName: "//hero") as! SKSpriteNode
 ```
 >
 
