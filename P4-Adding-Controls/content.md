@@ -51,7 +51,7 @@ The goal is to have the bunny hop every time we touch the screen, which will kee
 > Replace the declaration:
 >
 ```
-override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
   /* Called when a touch begins */
 >
   /* Apply vertical impulse */
