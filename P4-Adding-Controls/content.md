@@ -55,7 +55,7 @@ override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
   /* Called when a touch begins */
 >
   /* Apply vertical impulse */
-  hero.physicsBody?.applyImpulse(CGVectorMake(0, 250))
+  hero.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 250))
 ```
 > We are applying an impulse to the *hero's* `physicsBody`. Think of an impulse as like being hit by a baseball bat.
 > In this case a short vertical burst to make the bunny move vertically.
