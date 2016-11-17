@@ -27,6 +27,7 @@ I recommend you take some time to read [Apple's Documentation on Physics in Spri
 > You should notice a faint circle around the bunny to show the physics body.
 > Make sure the following boxes are checked: *Dynamic*, *Allow Rotation* and *Affected By Gravity*. (By default they should be checked)
 > Set *Friction* to `0`
+> Set *Mass* to `0.35`
 >
 > ![Enabling bunny physics](../Tutorial-Images/xcode_hero_physics.png)
 >
