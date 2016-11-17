@@ -76,7 +76,7 @@ It works, but it doesn't quite feel right. You may have noticed while testing th
 > Modify the `update(...)` method as shown:
 >
 ```
-override func update(currentTime: CFTimeInterval) {
+override func update(_ currentTime: CFTimeInterval) {
   /* Called before each frame is rendered */
 >
   /* Grab current velocity */
